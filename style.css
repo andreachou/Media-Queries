@@ -1,0 +1,57 @@
+button {
+    height: 80px;
+    font-size: 2rem;
+}
+
+
+/* We will set these stylings only if the device is a screen with a width of 1024px or more */
+/* For desktop users, arrange all four buttons in one line */
+@media only screen {
+    
+    .navbtn {
+        display: flex;
+    }
+
+    button {
+        margin: 10px;
+        background-color: cyan;
+    }
+}
+
+
+/* We will set these stylings only if the device is a screen with a width between 481px to 1023px */
+/* For tablet users, place two buttons per line */
+@media only screen and (max-width: 1023px) {
+
+    .navbtn {
+        display: flex;
+        flex-direction: column;
+    }
+
+    div {
+        display: inline-block;
+    }
+
+    button {
+        margin: 10px;
+        background-color: red;
+        color:white;
+    }
+}
+
+
+/* We will set these stylings only if the device is a screen with a width of 480px or less */
+/* For phone users, give each button its own line */
+@media only screen and (max-width: 480px) {
+
+    div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    button {
+        margin: 10px;
+        background-color: yellow;
+        color:black;
+    }
+}
